@@ -8,24 +8,12 @@ Page({
     this.otplite = this.selectComponent("#otplite");
     this.otplitePopup = this.selectComponent('#otplitePopup');
   },
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    modalHidden2: true
-  },
-  //事件处理函数
+  data: {},
   otpStart: function () {
-    console.log('xxxxx')
     this.otplite.open();
   },
-  onHide: function () {
-    console.log('xx index onHide');
-  },
-  onShow: function () {
-    console.log('xx index onShow');
-  },
+  onHide: function () { },
+  onShow: function () { },
   handleOtpSendRequest: function () {
     new Promise((resolve) => {
       setTimeout(() => {
