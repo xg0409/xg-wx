@@ -4,7 +4,9 @@
     bind:onAfterOpen="onAfterOpen">
     <view bindtap="closeModal" class="test1">
       <scroll-view scroll-y class="test1-scroll" bindscroll="scroll">
-        <view>venus-modal</view>
+        <view>venus-modalvenus-modalvenus-modal</view>
+        <view>venus-modalvenus-modalvenus-modal</view>
+        <view>venus-modalvenus-modalvenus-modal</view>
         <view>venus-modal</view>
         <view>venus-modal</view>
         <view>venus-modal</view>

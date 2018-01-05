@@ -1,10 +1,9 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const { setWebViewCbInfo } = require('../../utils/util');
 Page({
   onReady: function () {
-    console.log('modal onReady',this.prePage)
     //获得dialog组件
     this.dialog = this.selectComponent("#dialog");
     this.bottomup = this.selectComponent("#bottomup");
@@ -17,10 +16,9 @@ Page({
     modalHidden2: true
   },
   onUnload: function (e) {
-    console.log('modal onUnload', e)
-    wx.setStorageSync('modal',{
-      status:'refresh'
-    })
+    setWebViewCbInfo('modal', 'refresh', {
+      idCard: '8899'
+    });
   },
   //事件处理函数
   bindViewTap: function () {
@@ -29,7 +27,7 @@ Page({
   closeModal: function () {
     this.dialog.close();
   },
-  openBottomup:function(){
+  openBottomup: function () {
     this.bottomup.open();
   },
   onAfterOpen: function (data) {
@@ -42,7 +40,7 @@ Page({
     console.log('onAfterClose');
   },
   onLoad: function (option) {
-    console.log('modal onLoad',option);
+    console.log('modal onLoad', option);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

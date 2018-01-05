@@ -7,7 +7,7 @@
     <view class="otplite-desc">{{otpPromptTxt}}</view>
     <view class="otplite-content">
       <view class="otp-number">
-        <view wx:for="{{otpNumbers}}">
+        <view wx:for="{{otpNumbers}}" wx:key="key">
           <text wx:if="{{!item}}" space="{{true}}" decode="{{true}}">&nbsp;</text>
           <text wx:if="{{item}}">{{item}}</text>
         </view>
