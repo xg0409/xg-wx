@@ -1,0 +1,79 @@
+/* components/otplite/index.wxss */
+.otplite-popup {
+  width: 600rpx;
+  position: relative;
+  text-align: center;
+}
+
+.otplite-header {
+  height: 150rpx;
+  line-height: 150rpx;
+  font-size: 36rpx;
+  color: #333333;
+}
+
+.otplite-desc {
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 16rpx;
+}
+
+.otplite-content {
+  height: 90rpx;
+  position: relative;
+}
+
+.otp-number {
+  display: flex;
+  width: 510rpx;
+  margin: auto;
+}
+
+.otp-number > view {
+  height: 100%;
+  line-height: 90rpx;
+  font-family: DINAlternate-Bold;
+  font-size: 62rpx;
+  color: #13a4af;
+  flex: 1;
+}
+
+.otp-number > view text {
+  margin: 0 10rpx;
+  border-bottom: 1rpx solid #999;
+  display: block;
+}
+
+.otp-input {
+  height: 100%;
+  position: absolute;
+  width: 1000%;
+  top: 0;
+  left: -500%;
+  text-align: left;
+}
+
+.otplite-send-btn {
+  width: 510rpx;
+  margin: 30rpx auto;
+  overflow: hidden;
+}
+
+.otplite-send-btn view {
+  display: inline-block;
+  float: right;
+  border: 1rpx solid #999;
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  color: #333333;
+  padding: 5rpx 20rpx;
+}
+
+.otplite-btn {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #13a4af;
+  font-size: 36rpx;
+  border-top: 1rpx solid #e4e4e4;
+}

@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "demo",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "venus-otplite": "../../components/otplite/otplite/index",
+    "venus-otplite-popup": "../../components/otplite/otplite-popup/index"
+  }
+}

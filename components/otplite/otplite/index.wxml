@@ -1,0 +1,2 @@
+<!--components/otplite/index.wxml-->
+<text bindtap="_handleStart" class="{{running?'otp-ticks running':'otp-ticks'}}">{{ticksNumber}}</text>

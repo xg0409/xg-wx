@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/otplite/index",
+    "pages/modal/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#f2f4f7",
+    "navigationBarBackgroundColor": "#f2f4f7"
+  },
+  "prePage": "xxx",
+  "debug": false
+}

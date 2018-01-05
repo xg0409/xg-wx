@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "demo",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+    "venus-modal": "../../components/modal/modal/index",
+    "venus-bottomup": "../../components/modal/bottomup/index"
+  }
+}

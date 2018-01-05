@@ -1,0 +1,24 @@
+<!--components/otplite/index.wxml-->
+<view bindtap="_handleStart" class="{{running?'running':''}}">{{ticksNumber}}</view>
+
+<venus-modal id="dialog" closeByDocument="{{true}}" bind:onAfterClose="handleModalAfterClose">
+  <view class="otplite-popup">
+    <view class="otplite-header">获取短信验证码</view>
+    <view class="otplite-desc">{{otpPromptTxt}}</view>
+    <view class="otplite-content">
+      <view class="otp-number">
+        <view wx:for="{{otpNumbers}}">
+          <text wx:if="{{!item}}" space="{{true}}" decode="{{true}}">&nbsp;</text>
+          <text wx:if="{{item}}">{{item}}</text>
+        </view>
+      </view>
+      <input class="otp-input" maxlength="6" value="{{codeValue}}" type="number" bindinput="handleInput" />
+    </view>
+    <view class="otplite-send-btn">
+      <view>
+        <venus-otplite id="otplite" autoStart="{{otpAutoStart}}" bind:onSendRequest="handleOtpSendRequest"></venus-otplite>
+      </view>
+    </view>
+    <view class="otplite-btn" bindtap="handleSubmit">确认</view>
+  </view>
+</venus-modal>

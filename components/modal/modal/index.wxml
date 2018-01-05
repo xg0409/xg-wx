@@ -1,0 +1,8 @@
+<view wx-if="{{showModalStatus}}" class="{{'modal-portal '+ modalPortal}}">
+  <view class="modal-mask" animation="{{maskAnimationData}}" bindtap="_handleDocument"></view>
+  <view class="modal-portal-wrap">
+    <view class="modal-portal-content" animation="{{animationData}}">
+      <slot></slot>
+    </view>
+  </view>
+</view>
