@@ -4,4 +4,5 @@
     <button bindtap="handleOtplite">otplite</button>
     <button bindtap="handleChooseImage">上传图片</button>
     <image src="{{src}}"></image>
+    <button bindtap="handleDom">form操作</button>
 </view>

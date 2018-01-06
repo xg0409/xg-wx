@@ -1,0 +1,34 @@
+<view>
+  <form bindsubmit="formSubmit" report-submit="{{true}}">
+    <view class="form-group">
+      <view class="form-item">
+        <view class="form-item-hd">用户名</view>
+        <view class="form-item-bd">
+          <input type="text" name="username" placeholder="请输入真实姓名" focus="{{whoFocus=='username'?true:false}}" />
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item-hd">身份证</view>
+        <view class="form-item-bd">
+          <input type="idcard" name="identityNo" placeholder="请输入身份证号码" maxlength="18" focus="{{whoFocus=='identityNo'?true:false}}"/>
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item-hd">银行卡号</view>
+        <view class="form-item-bd">
+          <input type="number" name="bankcard" placeholder="请输入银行卡号" focus="{{whoFocus=='bankcard'?true:false}}"/>
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item-hd">选择城市</view>
+        <view class="form-item-bd">
+          <picker bindchange="bindPickerChange" name="picker" mode="selector" value="{{array[pickerIdex].id}}" range="{{array}}" range-key="name">
+            {{array[pickerIdex].name}}
+          </picker>
+        </view>
+      </view>
+    </view>
+    <button formType="submit">Submit</button>
+  </form>
+  <button open-type="share" bindtap="handleButton">转发</button>
+</view>

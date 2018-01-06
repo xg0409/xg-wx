@@ -70,5 +70,10 @@ Page({
         console.log('wx.chooseImage fail', res);
       }
     });
+  },
+  handleDom:function(){
+    wx.navigateTo({
+      url:'../form/index'
+    });
   }
 })
