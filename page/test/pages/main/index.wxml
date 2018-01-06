@@ -1,0 +1,7 @@
+<!--pages/main/index.wxml-->
+<view>
+    <button bindtap="handleModal">modal</button>
+    <button bindtap="handleOtplite">otplite</button>
+    <button bindtap="handleChooseImage">上传图片</button>
+    <image src="{{src}}"></image>
+</view>
