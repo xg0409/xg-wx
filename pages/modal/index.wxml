@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view>
   <venus-modal id="dialog" class="venus-modal-tt" closeByDocument="{{false}}" bind:onAfterClose="onAfterClose" bind:onRequestClose="onRequestClose"
     bind:onAfterOpen="onAfterOpen">
     <view bindtap="closeModal" class="test1">
@@ -30,21 +30,7 @@
     <view bindtap="closeModal">venus-bottomup</view>
     <view bindtap="closeModal">venus-bottomup</view>
   </venus-bottomup>
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-    <button bindtap="openBottomup">bottomup</button>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <button bindtap="webviewBack">返回</button>
+  <button bindtap="openModal">venus-modal</button>
+  <button bindtap="openBottomup">bottomup</button>
 </view>

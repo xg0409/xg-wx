@@ -1,7 +1,9 @@
 // components/otplite/index.js
 Component({
   ready() {
+    console.log('otplite lifecycle ready');
     this.ticksTimer;
+    this.otpStart();
   },
   /**
    * 组件的属性列表
@@ -37,26 +39,17 @@ Component({
     }
   },
 
-  /**
-   * 组件的初始数据
-   */
+  // 组件的初始数据
   data: {
     ticksNumber: "",
     running: false
   },
-  attached() {
-    this.otpStart();
-  },
-  detached() {
-    console.log("detached")
-  },
-  /**
-   * 组件的方法列表
-   */
+  // 组件的方法列表
   methods: {
     otpStart() {
       if (this.ticksTimer) {
-        clearTimeout(this.ticksTimer);
+        // clearTimeout(this.ticksTimer);
+        return;
       }
       let ticksNumber = this.data.totalTicks;
       if (!this.data.autoStart) {
@@ -91,5 +84,13 @@ Component({
     _getSendMessage(count) {
       return this.data.format.replace("{t}", count);
     }
+  },
+  moved() {
+    console.log('otplite lifecycle moved');
+  },
+  // 在组件实例被从页面节点树移除时执行
+  detached() {
+    console.log('otplite lifecycle detached');
+    clearTimeout(this.ticksTimer);
   }
 })
