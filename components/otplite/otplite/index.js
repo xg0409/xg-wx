@@ -1,4 +1,3 @@
-// components/otplite/index.js
 Component({
   ready() {
     console.log('otplite lifecycle ready');

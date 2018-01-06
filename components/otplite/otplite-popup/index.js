@@ -63,7 +63,7 @@ Component({
       const data = this.data;
       this.setData({
         otpAutoStart: data.autoStart,
-        otpPromptTxt:data.otpPromptTxt.replace('{mobile}',data.mobile)
+        otpPromptTxt: data.otpPromptTxt.replace('{mobile}', data.mobile)
       });
       this.otplite.otpStart();
       this.dialog.open();

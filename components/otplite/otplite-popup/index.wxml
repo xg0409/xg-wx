@@ -16,7 +16,8 @@
     </view>
     <view class="otplite-send-btn">
       <view>
-        <venus-otplite id="otplite" autoStart="{{otpAutoStart}}" bind:onSendRequest="handleOtpSendRequest"></venus-otplite>
+        <venus-otplite id="otplite" autoStart="{{otpAutoStart}}" format="{{format}}" sendTxt="{{sendTxt}}" sentTxt="{{sentTxt}}"
+          processingTxt="{{processingTxt}}" bind:onSendRequest="handleOtpSendRequest"></venus-otplite>
       </view>
     </view>
     <view class="otplite-btn" bindtap="handleSubmit">确认</view>

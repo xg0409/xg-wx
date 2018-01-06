@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view>
   <venus-otplite id="otplite" bind:tt="tt" autoStart="{{true}}" bind:onSendRequest="handleOtpSendRequest"></venus-otplite>
-  <venus-otplite-popup id="otplitePopup" autoStart="{{true}}" bind:onSendRequest="handleOtpPopupSendRequest" bind:onInputFinish="handleInputFinish"></venus-otplite-popup>
+  <venus-otplite-popup id="otplitePopup" autoStart="{{false}}" bind:onSendRequest="handleOtpPopupSendRequest" bind:onInputFinish="handleInputFinish"></venus-otplite-popup>
   <button bindtap="openOtplitePopup">open otplite-popup</button>
 </view>
